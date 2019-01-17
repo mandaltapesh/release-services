@@ -984,4 +984,32 @@ PROJECTS_CONFIG = {
             },
         ],
     },
+    'scriptworker/shipit': {
+        'update': False,
+        'deploys': [
+            {
+                'target': 'DOCKERHUB',
+                'options': {
+                    'testing': {
+                        'enable': True,
+                        'nix_path_attribute': 'dockerflow',
+                        'docker_registry': 'index.docker.io',
+                        'docker_repo': 'mozilla/shipitbackend',
+                    },
+                    'staging': {
+                        'enable': True,
+                        'nix_path_attribute': 'dockerflow',
+                        'docker_registry': 'index.docker.io',
+                        'docker_repo': 'mozilla/shipitbackend',
+                    },
+                    'production': {
+                        'enable': True,
+                        'nix_path_attribute': 'dockerflow',
+                        'docker_registry': 'index.docker.io',
+                        'docker_repo': 'mozilla/shipitbackend',
+                    },
+                },
+            },
+        ],
+    },
 }
